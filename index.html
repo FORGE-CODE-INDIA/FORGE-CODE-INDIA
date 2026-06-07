@@ -4,172 +4,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEXORA CREATIONS</title>
+    <title>NEXORA CREATIONS | Python Developer</title>
+
+    <!-- AOS ANIMATION -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Navigation -->
-    <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#stats">Stats</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-    </nav>
+<!-- PARTICLES -->
+<div id="particles-js"></div>
 
-    <!-- Hero Section -->
-    <div class="project">
-        <img src="logo.png" alt="NEXORA CREATIONS Logo" width="500">
+<!-- NAV -->
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#run">Run Python</a>
+    <a href="#contact">Contact</a>
+</nav>
 
-        <h2>Code. Create. Innovate.</h2>
+<!-- HERO -->
+<section class="hero" id="home" data-aos="fade-up">
+    <h1>🚀 NEXORA CREATIONS</h1>
+    <h2>Python Developer | Student | Builder</h2>
+    <p>Building Python projects, web apps & startup-level software</p>
 
-        <p>
-            Premium software solutions, Python projects, and innovative digital creations.
-        </p>
+    <div class="badges">
+        <span>Python</span>
+        <span>Flask</span>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>Beginner → Pro</span>
     </div>
 
-    <!-- About -->
-    <div class="project" id="about">
-        <h2>🌟 About Me</h2>
-
-        <p>
-            I am Hadi, a student and aspiring software developer.
-            Through NEXORA CREATIONS, I build Python projects,
-            learn programming concepts, and develop my skills in
-            web development and software creation.
-        </p>
+    <div class="cta-group">
+        <a href="#projects" class="cta">Explore Projects</a>
+        <a href="#run" class="cta2">Try Python Runner</a>
     </div>
+</section>
 
-    <!-- Mission -->
-    <div class="project">
-        <h2>🎯 Our Mission</h2>
+<!-- ABOUT -->
+<section class="card" id="about" data-aos="fade-right">
+    <h2>🌟 About Me</h2>
+    <p>
+        I am Hadi, a student developer passionate about Python, web development, and building real-world applications.
+        Nexora Creations is my journey of learning and building projects step by step.
+    </p>
+</section>
 
-        <p>
-            To build useful software, learn modern technologies,
-            and create innovative digital solutions through
-            continuous improvement.
-        </p>
-    </div>
+<!-- PROJECTS -->
+<section id="projects">
 
-    <!-- Current Goal -->
-    <div class="project">
-        <h2>🚀 Current Goal</h2>
-
-        <p>
-            Build 10 Python projects and improve my web
-            development skills through real-world practice.
-        </p>
-    </div>
-
-    <!-- Projects -->
-    <div class="project" id="projects">
+    <div class="card" data-aos="zoom-in">
         <h2>🧮 Python Calculator</h2>
-
-        <p>
-            A calculator that performs addition, subtraction,
-            multiplication, division, and modulus operations.
-        </p>
-
-        <a href="calculator.py" download>
-            ⬇ Download Calculator
-        </a>
+        <p>Basic calculator using Python</p>
+        <a class="btn" href="calculator.py" download>⬇ Download</a>
     </div>
 
-    <div class="project">
-        <h2>🎮 Advanced Number Guessing Game</h2>
-
-        <p>
-            A level-based guessing game with 3 chances per level
-            and increasing difficulty.
-        </p>
-
-        <a href="number_guessing.py" download>
-            ⬇ Download Number Guessing Game
-        </a>
+    <div class="card" data-aos="zoom-in">
+        <h2>🎮 Number Guessing Game</h2>
+        <p>Level-based difficulty game</p>
+        <a class="btn" href="number_guessing.py" download>⬇ Download</a>
     </div>
 
-    <div class="project">
-        <h2>📊 Multiplication Table Generator</h2>
-
-        <p>
-            Generates multiplication tables from 1 to 10 for any number.
-        </p>
-
-        <a href="multiplication_table.py" download>
-            ⬇ Download Multiplication Table Generator
-        </a>
+    <div class="card" data-aos="zoom-in">
+        <h2>📊 Multiplication Table</h2>
+        <p>Generate tables using Python</p>
+        <a class="btn" href="multiplication_table.py" download>⬇ Download</a>
     </div>
 
-    <!-- Upcoming Projects -->
-    <div class="project">
-        <h2>🔮 Upcoming Projects</h2>
+</section>
 
-        <p>❓ Quiz Game</p>
-        <p>🔐 Password Generator</p>
-        <p>✊ Rock Paper Scissors</p>
-    </div>
+<!-- PYTHON RUNNER (FLASK CONNECTED) -->
+<section class="card" id="run" data-aos="fade-up">
 
-    <!-- Portfolio Stats -->
-    <div class="project" id="stats">
-        <h2>📈 Portfolio Stats</h2>
+    <h2>⚡ Python Online Runner</h2>
 
-        <p>🚀 Projects Completed: 3</p>
-        <p>🐍 Main Language: Python</p>
-        <p>🌐 Technologies: HTML & CSS</p>
-        <p>
-            💻 GitHub:
-            <a href="https://github.com/Nexora-py" target="_blank">
-                Nexora-py
-            </a>
-        </p>
-    </div>
+    <textarea id="code" placeholder="Write Python code here..."></textarea>
 
-    <!-- Skills -->
-    <div class="project" id="skills">
-        <h2>🛠 Skills</h2>
+    <button onclick="runCode()">Run Code</button>
 
-        <p>🐍 Python Programming</p>
-        <p>🌐 HTML</p>
-        <p>🎨 CSS</p>
-        <p>💻 Git & GitHub</p>
-    </div>
+    <pre id="output"></pre>
 
-    <!-- Founder -->
-    <div class="project">
-        <h2>👑 Founder</h2>
+</section>
 
-        <p><strong>Hadi</strong></p>
+<!-- CONTACT -->
+<section class="card" id="contact" data-aos="fade-up">
+    <h2>📬 Contact</h2>
+    <p>Email: hadivga@gmail.com</p>
+    <p>GitHub: Nexora-py</p>
+</section>
 
-        <p>
-            Student Developer and Founder of NEXORA CREATIONS.
-        </p>
-    </div>
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 NEXORA CREATIONS</p>
+    <p>Built by Hadi 🚀</p>
+</footer>
 
-    <!-- Contact -->
-    <div class="project" id="contact">
-        <h2>📬 Contact</h2>
+<!-- SCRIPTS -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
-        <p>Interested in my projects or want to connect?</p>
+<script>
+particlesJS("particles-js", {
+  particles: {
+    number: { value: 60 },
+    color: { value: "#1f6feb" },
+    shape: { type: "circle" },
+    opacity: { value: 0.5 },
+    size: { value: 3 },
+    move: { enable: true, speed: 2 }
+  }
+});
+</script>
 
-        <p>📧 Email: hadivga@gmail.com</p>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init();
+</script>
 
-        <p>
-            💻 GitHub:
-            <a href="https://github.com/Nexora-py" target="_blank">
-                Nexora-py
-            </a>
-        </p>
-    </div>
-
-    <!-- Footer -->
-    <footer>
-        <p>© 2026 NEXORA CREATIONS</p>
-        <p>Created by Hadi</p>
-        <p>📧 hadivga@gmail.com</p>
-    </footer>
+<!-- FLASK RUN FUNCTION -->
+<script>
+function runCode() {
+    fetch("/run", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({
+            code: document.getElementById("code").value
+        })
+    })
+    .then(res => res.json())
+    .then(data => {
+        document.getElementById("output").innerText = data.output;
+    });
+}
+</script>
 
 </body>
-
 </html>
