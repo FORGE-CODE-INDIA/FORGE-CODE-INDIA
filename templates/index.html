@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,13 +23,13 @@
 <!-- HERO -->
 <section class="hero">
 
-    <img src="{{ url_for('static', filename='logo.png') }}"
+    <img src="{{ url_for('static', filename='forge.png') }}"
          alt="Forge Code India Logo"
-         width="220">
+         class="logo">
 
-    <h1>🚀 FORGE CODE INDIA</h1>
+    <h1>FORGE CODE INDIA</h1>
 
-    <h2>Code. Create. Innovate.</h2>
+    <h2>Code • Create • Innovate</h2>
 
     <p>
         Building Python projects, web applications,
@@ -50,25 +49,13 @@
 <!-- ABOUT -->
 <section class="card" id="about">
 
-    <h2>🌟 About Me</h2>
+    <h2>About Me</h2>
 
     <p>
         I am Hadi, a Class 11 student and aspiring software developer.
-        Through FORGE CODE INDIA, I build Python projects,
-        web applications, and continuously improve my skills.
-    </p>
-
-    <h3>🎯 Mission</h3>
-
-    <p>
-        To build useful software, learn modern technologies,
-        and create innovative digital solutions.
-    </p>
-
-    <h3>🚀 Current Goal</h3>
-
-    <p>
-        Build 10 Python projects and become a full-stack developer.
+        Through FORGE CODE INDIA, I create Python projects,
+        websites and software applications while continuously
+        improving my programming skills.
     </p>
 
 </section>
@@ -76,146 +63,90 @@
 <!-- PROJECTS -->
 <section class="card" id="projects">
 
-    <h2>🧮 Projects</h2>
+    <h2>Projects</h2>
 
-    <h3>Python Calculator</h3>
-
-    <p>
-        Performs Addition, Subtraction,
-        Multiplication, Division and Modulus operations.
-    </p>
-
+    <h3>🧮 Python Calculator</h3>
     <a class="btn" href="/static/calculator.py" download>
-        Download Calculator
+        Download
     </a>
 
     <hr>
 
-    <h3>Advanced Number Guessing Game</h3>
-
-    <p>
-        Level-based guessing game with
-        increasing difficulty and 3 chances.
-    </p>
-
+    <h3>🎮 Number Guessing Game</h3>
     <a class="btn" href="/static/number_guessing.py" download>
-        Download Game
+        Download
     </a>
 
     <hr>
 
-    <h3>Multiplication Table Generator</h3>
-
-    <p>
-        Generates multiplication tables
-        from 1 to 10.
-    </p>
-
+    <h3>📊 Multiplication Table Generator</h3>
     <a class="btn" href="/static/multiplication_table.py" download>
-        Download Program
+        Download
     </a>
 
 </section>
 
-<!-- UPCOMING PROJECTS -->
+<!-- UPCOMING -->
 <section class="card">
 
-    <h2>🔮 Upcoming Projects</h2>
+    <h2>Upcoming Projects</h2>
 
-    <p>❓ Quiz Game <span>Coming Soon</span></p>
-    <p>🔐 Password Generator <span>Coming Soon</span></p>
-    <p>🎮 Rock Paper Scissors <span>Coming Soon</span></p>
-    <p>🌦 Weather App <span>Coming Soon</span></p>
-
-</section>
-
-<!-- PYTHON RUNNER -->
-<section class="card">
-
-    <h2>⚡ Python Online Runner</h2>
-
-    <textarea id="code"
-        placeholder="Write Python code here..."></textarea>
-
-    <br><br>
-
-    <button onclick="runCode()">Run Code</button>
-
-    <pre id="output">
-Output will appear here...
-    </pre>
+    <p>❓ Quiz Game <span class="coming">Coming Soon</span></p>
+    <p>🔐 Password Generator <span class="coming">Coming Soon</span></p>
+    <p>🎮 Rock Paper Scissors <span class="coming">Coming Soon</span></p>
+    <p>🌦 Weather App <span class="coming">Coming Soon</span></p>
 
 </section>
 
 <!-- STATS -->
 <section class="card" id="stats">
 
-    <h2>📈 Portfolio Stats</h2>
+    <h2>Portfolio Stats</h2>
 
     <p>🚀 Projects Completed: 3</p>
-    <p>💻 Website Status: Online</p>
     <p>🐍 Main Language: Python</p>
-    <p>🌐 Web Stack: HTML, CSS, Flask</p>
-    <p>📚 Learning Journey: Active</p>
+    <p>🌐 Web Technologies: HTML, CSS, Flask</p>
+    <p>💻 Website Status: Online</p>
 
 </section>
 
 <!-- SKILLS -->
 <section class="card" id="skills">
 
-    <h2>🛠 Skills</h2>
+    <h2>Skills</h2>
 
-    <p>🐍 Python</p>
-    <p>🌐 HTML</p>
-    <p>🎨 CSS</p>
-    <p>⚙️ Flask</p>
-    <p>💻 Git & GitHub</p>
+    <p>Python</p>
+    <p>HTML</p>
+    <p>CSS</p>
+    <p>Flask</p>
+    <p>Git & GitHub</p>
 
 </section>
 
 <!-- RESUME -->
 <section class="card">
 
-    <h2>📄 Resume</h2>
-
-    <p>
-        Download my latest resume.
-    </p>
+    <h2>Resume</h2>
 
     <a class="btn"
        href="{{ url_for('static', filename='Hadi_Resume.pdf') }}"
        download>
-        ⬇ Download Resume
+       Download Resume
     </a>
-
-</section>
-
-<!-- FOUNDER -->
-<section class="card">
-
-    <h2>👑 Founder</h2>
-
-    <p><strong>Hadi</strong></p>
-
-    <p>
-        Class 11 Student Developer and Founder of
-        FORGE CODE INDIA.
-    </p>
 
 </section>
 
 <!-- CONTACT -->
 <section class="card" id="contact">
 
-    <h2>📬 Contact</h2>
+    <h2>Contact</h2>
 
-    <p>📧 Email: hadivga@gmail.com</p>
+    <p>📧 hadivga@gmail.com</p>
 
     <p>
-        💻 GitHub:
-        <a href="https://github.com/Nexora-py"
-           target="_blank">
-           Nexora-py
+        💻
+        <a href="https://github.com/Nexora-py" target="_blank">
+            GitHub Profile
         </a>
     </p>
 
@@ -226,38 +157,9 @@ Output will appear here...
 
     <p>© 2026 FORGE CODE INDIA</p>
 
-    <p>
-        Built with Python, Flask and GitHub
-    </p>
-
-    <p>
-        Created by Hadi
-    </p>
+    <p>Created by Hadi</p>
 
 </footer>
 
-<script>
-function runCode() {
-    fetch("/run", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            code: document.getElementById("code").value
-        })
-    })
-    .then(res => res.json())
-    .then(data => {
-        document.getElementById("output").innerText = data.output;
-    })
-    .catch(err => {
-        document.getElementById("output").innerText =
-            "Error running code";
-    });
-}
-</script>
-
 </body>
 </html>
-```
