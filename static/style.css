@@ -14,6 +14,7 @@ body {
     font-family: 'Courier New', Courier, monospace;
     margin: 0;
     padding: 0;
+    text-align: center; /* Center-aligns all general prose and headers */
     background-image: linear-gradient(rgba(0, 210, 255, 0.02) 1px, transparent 1px),
                       linear-gradient(90deg, rgba(0, 210, 255, 0.02) 1px, transparent 1px);
     background-size: 25px 25px;
@@ -43,6 +44,9 @@ body::before {
     max-width: 1100px;
     margin: 0 auto;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers block components horizontally */
 }
 
 /* Navbar Style */
@@ -53,6 +57,7 @@ body::before {
     padding: 15px 40px;
     background: var(--terminal-bg);
     border-bottom: 1px solid var(--primary-blue);
+    box-sizing: border-box;
 }
 .navbar-right a {
     color: var(--text-color);
@@ -73,6 +78,7 @@ body::before {
 .profile-header {
     text-align: center;
     padding: 40px 0;
+    width: 100%;
 }
 .profile-logo {
     width: 80px;
@@ -81,6 +87,9 @@ body::before {
 }
 .badge-row {
     margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 .tag-badge {
     background: rgba(0, 210, 255, 0.1);
@@ -97,15 +106,18 @@ body::before {
 .terminal-window {
     background: var(--terminal-bg);
     border: 1px solid var(--border-color);
-    border-left: 4px solid var(--primary-blue);
-    padding: 20px;
+    border-top: 4px solid var(--primary-blue); /* Moved accent line to top for centered layout */
+    padding: 25px;
     margin-bottom: 25px;
     border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center; /* Centers paragraphs inside windows */
 }
 .window-title {
     font-size: 1.1rem;
     font-weight: bold;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 .section-subtitle {
     font-size: 0.85rem;
@@ -119,6 +131,8 @@ body::before {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
+    width: 100%;
+    text-align: center;
 }
 .card {
     background: var(--terminal-bg);
@@ -127,6 +141,10 @@ body::before {
     border-radius: 4px;
     position: relative;
     transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 .card:hover {
     border-color: var(--primary-blue);
@@ -146,7 +164,7 @@ body::before {
     padding: 2px 8px;
     font-size: 0.75rem;
     border-radius: 3px;
-    margin-right: 5px;
+    margin: 0 3px 5px 3px;
     display: inline-block;
 }
 .badge.blue { background: rgba(0, 210, 255, 0.15); color: var(--primary-blue); border: 1px solid var(--primary-blue); }
@@ -154,7 +172,8 @@ body::before {
 
 /* Buttons and Links */
 .btn {
-    display: block;
+    display: inline-block;
+    width: 80%;
     text-align: center;
     border: 1px solid var(--primary-blue);
     color: var(--primary-blue);
@@ -164,6 +183,7 @@ body::before {
     font-weight: bold;
     background: transparent;
     cursor: pointer;
+    margin-top: 10px;
 }
 .btn:hover {
     background: rgba(0, 210, 255, 0.1);
@@ -172,6 +192,12 @@ body::before {
 }
 
 /* Milestone lists */
+.milestone-list {
+    display: inline-block;
+    text-align: left; /* Keeps text legible while list wrapper centers */
+    max-width: 800px;
+    margin: 0 auto;
+}
 .milestone-list li {
     margin-bottom: 12px;
     line-height: 1.5;
@@ -184,6 +210,10 @@ body::before {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
+    width: 100%;
+}
+@media (max-width: 600px) {
+    .metrics-grid { grid-template-columns: repeat(2, 1fr); }
 }
 .metric-box {
     background: rgba(0,0,0,0.3);
@@ -194,20 +224,20 @@ body::before {
 .metric-box h5 { color: var(--primary-green); margin: 0 0 5px 0; font-size: 1.1rem; }
 .metric-box p { margin: 0; font-size: 0.8rem; opacity: 0.7; }
 
-.progress-container { margin-bottom: 15px; }
+.progress-container { margin-bottom: 15px; text-align: left; width: 100%; max-width: 600px; margin-left: auto; margin-right: auto; }
 .progress-label { display: flex; justify-content: space-between; font-size: 0.85rem; margin-bottom: 5px; }
 .progress-bar { background: rgba(255,255,255,0.05); height: 12px; border-radius: 6px; overflow: hidden; border: 1px solid var(--border-color); }
 .progress-fill { background: var(--primary-green); height: 100%; box-shadow: 0 0 8px var(--primary-green); }
 
 /* Sandbox Controls */
-.sandbox-box { background: #282a36; border: 1px solid #44475a; border-radius: 4px; padding: 15px; }
-.sandbox-header { display: flex; gap: 10px; margin-bottom: 10px; }
+.sandbox-box { background: #282a36; border: 1px solid #44475a; border-radius: 4px; padding: 15px; width: 100%; max-width: 700px; box-sizing: border-box; margin: 0 auto; }
+.sandbox-header { display: flex; gap: 10px; margin-bottom: 10px; justify-content: center; }
 .sandbox-tab { background: #44475a; border: none; color: #fff; padding: 5px 10px; font-family: monospace; cursor: pointer; }
-.code-area { background: #1e1f29; padding: 15px; color: #f8f8f2; border-radius: 4px; font-family: monospace; }
+.code-area { background: #1e1f29; padding: 15px; color: #f8f8f2; border-radius: 4px; font-family: monospace; text-align: left; }
 .execute-btn { background: #50fa7b; border: none; color: #282a36; padding: 8px 15px; font-weight: bold; font-family: monospace; margin-top: 10px; cursor: pointer; border-radius: 4px; }
-.console-output { background: #000; padding: 10px; color: #f8f8f2; border-left: 3px solid var(--primary-blue); font-size: 0.85rem; margin-top: 10px; font-family: monospace; }
+.console-output { background: #000; padding: 10px; color: #f8f8f2; border-top: 3px solid var(--primary-blue); font-size: 0.85rem; margin-top: 10px; font-family: monospace; text-align: left; }
 
 /* Global Fonts and Glow Effects */
-h1, h2, h3, .brand-text { color: var(--primary-blue); text-shadow: 0 0 6px rgba(0, 210, 255, 0.4); }
+h1, h2, h3, .brand-text { color: var(--primary-blue); text-shadow: 0 0 6px rgba(0, 210, 255, 0.4); text-align: center; width: 100%; }
 .accent-text { color: var(--primary-green); text-shadow: 0 0 6px rgba(57, 255, 20, 0.4); }
-.footer { border-top: 1px solid var(--border-color); padding: 20px 40px; display: flex; justify-content: space-between; font-size: 0.8rem; opacity: 0.7; background: var(--terminal-bg); margin-top: 50px;}
+.footer { border-top: 1px solid var(--border-color); padding: 20px 40px; display: flex; justify-content: space-between; font-size: 0.8rem; opacity: 0.7; background: var(--terminal-bg); margin-top: 50px; width: 100%; box-sizing: border-box; }
