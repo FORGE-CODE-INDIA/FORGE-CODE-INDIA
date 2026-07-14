@@ -9,12 +9,12 @@ DATA_FILE = "site_data.json"
 
 # Safe default dataset structure to prevent 500 template rendering crashes
 DEFAULT_DATA = {
-    "name": "Hadi",
+    "name": "ROOT-TERMINAL-HUB",
     "title": "Python Developer | Flask Developer | Future Software Engineer",
     "bio": "Hi, I'm Hadi, a Class 11 student passionate about Python programming, automation, Flask development, and software engineering.",
     "badges": ["Python 3.x", "Flask Framework", "Automation", "Git"],
     "milestones": [
-        "Class 11 CBSE Computer Science Track: Actively mastering fundamental computational thinking.",
+        "Class 11 Computer Science Track: Actively mastering fundamental computational thinking.",
         "Backend Web Infrastructure Core: Constructed synchronous routing networks using Flask.",
         "Open Source Architecture: Tracking codebase modifications with Git."
     ],
